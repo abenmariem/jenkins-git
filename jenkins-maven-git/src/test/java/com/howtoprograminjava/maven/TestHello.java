@@ -13,7 +13,7 @@ public class TestHello {
 
 	@Test
 	public void test() {
-		assertTrue("Hello World !".equals(Hello.getMessage()));
+		assertTrue("Hello World !!".equals(Hello.getMessage()));
 	}
 
 }
