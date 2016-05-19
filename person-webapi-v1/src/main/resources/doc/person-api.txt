@@ -1,0 +1,107 @@
+
+CREATED using the chrome extension: Advanced Rest Client
+
+
+
+
+Add a person:
+URL: http://127.0.0.1:8080/addPerson
+REQUEST:
+
+type: POST
+content-type: application/json
+
+{"firstName":"Abderrahmen",
+"lastName": "Ben Mariem",
+ "photo":"/photos/abderrahmen.jpg",
+ "cv": "/CV/abderrahmen.pdf"
+}
+
+RESPONSE:
+
+{
+  "status": 0,
+  "data": {
+    "firstName": "Abderrahmen",
+    "lastName": "Ben Mariem",
+    "cv": "/CV/abderrahmen.pdf",
+    "photo": "/photos/abderrahmen.jpg",
+    "id": 4
+  }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Get a Person:
+URL: http://127.0.0.1:8080/getPersonById/4
+REQUEST: 
+type: GET
+http://127.0.0.1:8080/getPersonById/4
+RESPONSE::
+{
+  "status": 0,
+  "data": {
+    "id": 4,
+    "version": 0,
+    "firstName": "Abderrahmen",
+    "lastName": "Ben Mariem",
+    "photo": "/photos/abderrahmen.jpg",
+    "cv": "/CV/abderrahmen.pdf"
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Get All Persons:
+
+URL: http://127.0.0.1:8080/getAllPersons
+REQUEST: NONE --> type: GET
+RESPONSE:
+{
+  "status": 0,
+  "data": [
+    {
+      "id": 2,
+      "version": 0,
+      "firstName": "Mohamed",
+      "lastName": "Ben Mohamed",
+      "photo": "/photos/mohamed.jpg",
+      "cv": "/cv/mohamed.pdf"
+    },
+    {
+      "id": 3,
+      "version": 0,
+      "firstName": "Mohamed",
+      "lastName": "Ben Mohamed",
+      "photo": "/photos/mohamed.jpg",
+      "cv": "/cv/mohamed.pdf"
+    },
+    {
+      "id": 4,
+      "version": 0,
+      "firstName": "Abderrahmen",
+      "lastName": "Ben Mariem",
+      "photo": "/photos/abderrahmen.jpg",
+      "cv": "/CV/abderrahmen.pdf"
+    }
+  ]
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Delete Person:
+
+URL: http://127.0.0.1:8080/deletePerson
+REQUEST: 
+type: POST
+content-type: application/json
+{"idPerson":"4"}
+
+RESPONSE::
+{
+  "status": 0,
+  "data": null
+}
+
+
