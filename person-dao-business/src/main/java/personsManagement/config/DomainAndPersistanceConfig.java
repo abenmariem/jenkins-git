@@ -36,7 +36,7 @@ public class DomainAndPersistanceConfig {
 		@Bean
 		public JpaVendorAdapter jpaVendorAdapter() {
 			HibernateJpaVendorAdapter hibernateJpaVendorAdapter = new HibernateJpaVendorAdapter();
-			hibernateJpaVendorAdapter.setShowSql(false);
+			hibernateJpaVendorAdapter.setShowSql(true);
 			hibernateJpaVendorAdapter.setGenerateDdl(false);
 			hibernateJpaVendorAdapter.setDatabase(Database.MYSQL);
 			return hibernateJpaVendorAdapter;
