@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd ">
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>maven-examples</artifactId>
+	<!-- <groupId>com.howtoprograminjava.maven</groupId> -->
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>Learning Maven</name>
+	<description>This project shows how to use maven</description>
+	<url>http://how-to-program-in-java.com</url>
+
+	<parent>
+		<!-- mvn help:effective-pom : show the effective pom -->
+		<groupId>com.howtoprograminjava.maven</groupId>
+		<artifactId>parent-project</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<profiles>
+
+		<profile>
+			<activation>
+				<property>
+					<!-- The profile is selected when the environment variable PACKAGE_ENV 
+						is equal to PROD -->
+					<!-- To select a profile in the command line: mvn -PProduction package -->
+					<name>env.PACKAGE_ENV</name>
+					<value>PROD</value>
+				</property>
+			</activation>
+			<id>Production</id>
+			<build>
+				<directory>myTarget</directory>
+			</build>
+		</profile>
+
+
+	</profiles>
+
+	<dependencies>
+
+		<dependency>
+			<!-- Gestion de conflits des dépendances transitives
+			By default maven takes the dependancy that has the latest version
+			 -->
+			<groupId>com.howtoprograminjava.maven</groupId>
+			<artifactId>maven-conflict-example</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.howtoprograminjava.maven</groupId>
+			<artifactId>maven-conflict-example2</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.commons</groupId>
+					<artifactId>commons-lang3</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+
+
+<!-- Providing values for the properties of a plugin goal 
+mvn help:describe compiler: compile -Dmaven.compiler.verbose=true
+-->
+
+   <!-- 
+   Describe a plugin and its goals
+   mvn help:describe -Dplugin=compiler -->
+   
+      <!-- 
+   Describe a phase and shows the phases that compose the whole lifecycle
+   mvn help:describe -Dcmd=compile -->
+   
+
+	<!-- <build> customise maven directory layout <sourceDirectory>src/nonstandard/java</sourceDirectory> 
+		<directory>myTarget</directory> </build> -->
+
+</project>
