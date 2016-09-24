@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.howtoprograminjava.maven</groupId>
+  <artifactId>parent-project</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  	<licenses>
+		<license>
+			<name>Apache Licence</name>
+			<comments>This project is free to use for everyone</comments>
+		</license>
+	</licenses>
+
+	<organization>
+		<name>How To Program In JAVA</name>
+		<url>http://how-to-program-in-java.com</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<name>Abderrahmen Ben Mariem</name>
+			<email>abderrahmen.ben.mariem@gmail.com</email>
+		</developer>
+	</developers>
+  
+  
+</project>
