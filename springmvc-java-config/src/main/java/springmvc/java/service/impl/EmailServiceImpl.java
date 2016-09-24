@@ -1,9 +1,9 @@
-package spring.java.service.impl;
+package springmvc.java.service.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import spring.java.service.EmailService;
+import springmvc.java.service.EmailService;
 
 public class EmailServiceImpl implements EmailService{
 	private static final Logger LOGGER = LoggerFactory.getLogger(EmailServiceImpl.class);

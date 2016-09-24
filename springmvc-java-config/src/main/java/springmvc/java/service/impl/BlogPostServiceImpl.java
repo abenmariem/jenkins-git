@@ -1,10 +1,10 @@
-package spring.java.service.impl;
+package springmvc.java.service.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import spring.java.domain.BlogPost;
-import spring.java.service.BlogPostService;
+import springmvc.java.domain.BlogPost;
+import springmvc.java.service.BlogPostService;
 
 public class BlogPostServiceImpl implements BlogPostService {
 
